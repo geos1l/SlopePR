@@ -112,6 +112,18 @@ CREATE POLICY "Users can view own logs"
   ON logs FOR SELECT
   USING (auth.uid() = user_id);
 
+-- Allow anyone to view logs from users who are on the leaderboard
+-- This enables the leaderboard feature to work for logged-out users
+CREATE POLICY "Anyone can view leaderboard user logs"
+  ON logs FOR SELECT
+  USING (
+    EXISTS (
+      SELECT 1 FROM profiles
+      WHERE profiles.id = logs.user_id
+      AND profiles.show_on_leaderboard = true
+    )
+  );
+
 -- Allow users to insert their own logs
 CREATE POLICY "Users can insert own logs"
   ON logs FOR INSERT
