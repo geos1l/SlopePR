@@ -11,7 +11,7 @@ export default function QuickActions() {
         <button
           key={action.label}
           className={`
-            flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all
+            flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-sm transition-all
             ${
               action.primary
                 ? 'bg-[#EF4444] text-white hover:bg-[#DC2626] shadow-lg shadow-[#EF4444]/20'

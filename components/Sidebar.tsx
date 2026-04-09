@@ -72,7 +72,7 @@ export default function Sidebar() {
                   key={item.href}
                   href={item.href}
                   className={`
-                    flex items-center gap-3 px-4 py-3 rounded-lg transition-all
+                    flex items-center gap-3 px-4 py-3 rounded-xl transition-all
                     ${
                       isActive
                         ? 'bg-[#d4af37] text-[#0f0f0f] font-semibold'
@@ -103,7 +103,7 @@ export default function Sidebar() {
               </div>
               <button
                 onClick={logout}
-                className="w-full bg-[#2a2a2a] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#1a1a1a] transition-colors text-sm"
+                className="w-full bg-[#2a2a2a] text-white px-4 py-2 rounded-xl font-medium hover:bg-[#1a1a1a] transition-colors text-sm"
               >
                 Log Out
               </button>
@@ -112,7 +112,7 @@ export default function Sidebar() {
             <div className="p-4 border-t border-[#2a2a2a] text-center">
               <Link
                 href="/login"
-                className="block bg-[#d4af37] text-[#0f0f0f] px-4 py-2 rounded-lg font-semibold hover:bg-[#b8941f] transition-colors w-full"
+                className="block bg-[#d4af37] text-[#0f0f0f] px-4 py-2 rounded-xl font-semibold hover:bg-[#b8941f] transition-colors w-full"
               >
                 Log In
               </Link>
@@ -125,7 +125,7 @@ export default function Sidebar() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed top-4 left-4 z-40 lg:hidden bg-[#d4af37] text-[#0f0f0f] p-2 rounded-lg shadow-lg font-semibold"
+          className="fixed top-4 left-4 z-40 lg:hidden bg-[#d4af37] text-[#0f0f0f] p-2 rounded-xl shadow-lg font-semibold"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

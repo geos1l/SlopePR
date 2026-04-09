@@ -115,10 +115,10 @@ export default function SettingsPage() {
         <main className="lg:ml-64 px-4 sm:px-6 lg:px-8 py-16 transition-all duration-300">
           <div className="max-w-md mx-auto text-center">
             <h1 className="text-4xl font-bold mb-8 tracking-tight text-white">Settings</h1>
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-12">
+            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-12">
               <Link
                 href="/login"
-                className="inline-block bg-[#d4af37] text-[#0f0f0f] px-8 py-4 rounded-lg font-semibold hover:bg-[#b8941f] transition-colors text-lg"
+                className="inline-block bg-[#d4af37] text-[#0f0f0f] px-8 py-4 rounded-xl font-semibold hover:bg-[#b8941f] transition-colors text-lg"
               >
                 Sign In
               </Link>
@@ -138,7 +138,7 @@ export default function SettingsPage() {
           </h1>
 
           {/* Account Settings */}
-          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-6 mb-6">
+          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6 mb-6">
             <h2 className="text-xl font-bold mb-4 text-white tracking-tight">Account</h2>
             <div className="space-y-4">
               <div>
@@ -150,7 +150,7 @@ export default function SettingsPage() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   disabled={loading}
-                  className="w-full bg-[#2a2a2a] border border-[#2a2a2a] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#d4af37] disabled:opacity-50"
+                  className="w-full bg-[#2a2a2a] border border-[#2a2a2a] rounded-xl px-4 py-2 text-white focus:outline-none focus:border-[#d4af37] disabled:opacity-50"
                 />
               </div>
               <div>
@@ -162,14 +162,14 @@ export default function SettingsPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={true}
-                  className="w-full bg-[#2a2a2a] border border-[#2a2a2a] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#d4af37] opacity-50 cursor-not-allowed"
+                  className="w-full bg-[#2a2a2a] border border-[#2a2a2a] rounded-xl px-4 py-2 text-white focus:outline-none focus:border-[#d4af37] opacity-50 cursor-not-allowed"
                   title="Email cannot be changed here"
                 />
               </div>
               <button
                 onClick={() => handleSave('account')}
                 disabled={loading || saving}
-                className={`bg-[#d4af37] text-[#0f0f0f] px-6 py-2 rounded-lg font-semibold hover:bg-[#b8941f] transition-colors ${
+                className={`bg-[#d4af37] text-[#0f0f0f] px-6 py-2 rounded-xl font-semibold hover:bg-[#b8941f] transition-colors ${
                   loading || saving ? 'opacity-50 cursor-not-allowed' : ''
                 }`}
               >
@@ -179,7 +179,7 @@ export default function SettingsPage() {
           </div>
 
           {/* Privacy Settings */}
-          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-6 mb-6">
+          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6 mb-6">
             <h2 className="text-xl font-bold mb-4 text-white tracking-tight">Privacy</h2>
             <div className="space-y-4">
               <div className="flex items-center justify-between">
@@ -205,7 +205,7 @@ export default function SettingsPage() {
               <button
                 onClick={() => handleSave('privacy')}
                 disabled={loading || saving}
-                className={`bg-[#d4af37] text-[#0f0f0f] px-6 py-2 rounded-lg font-semibold hover:bg-[#b8941f] transition-colors ${
+                className={`bg-[#d4af37] text-[#0f0f0f] px-6 py-2 rounded-xl font-semibold hover:bg-[#b8941f] transition-colors ${
                   loading || saving ? 'opacity-50 cursor-not-allowed' : ''
                 }`}
               >
@@ -215,7 +215,7 @@ export default function SettingsPage() {
           </div>
 
           {/* Danger Zone */}
-          <div className="bg-[#1a1a1a] border border-[#d4af37]/30 rounded-lg p-6">
+          <div className="bg-[#1a1a1a] border border-[#d4af37]/30 rounded-xl p-6">
             <h2 className="text-xl font-bold mb-4 text-[#d4af37] tracking-tight">Danger Zone</h2>
             <div className="space-y-4">
               <div>
@@ -223,7 +223,7 @@ export default function SettingsPage() {
                 <div className="text-sm text-[#8b8b8b] mb-4">
                   Permanently delete your account and all associated data. This action cannot be undone.
                 </div>
-                <button className="bg-[#d4af37] text-[#0f0f0f] px-6 py-2 rounded-lg font-semibold hover:bg-[#b8941f] transition-colors">
+                <button className="bg-[#d4af37] text-[#0f0f0f] px-6 py-2 rounded-xl font-semibold hover:bg-[#b8941f] transition-colors">
                   Delete Account
                 </button>
               </div>

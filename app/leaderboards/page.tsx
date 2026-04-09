@@ -218,7 +218,7 @@ export default function LeaderboardsPage() {
           </p>
 
           {/* Filters */}
-          <div className="bg-[#2a2a2a] border border-[#2a2a2a] rounded-lg p-6 mb-6">
+          <div className="bg-[#2a2a2a] border border-[#2a2a2a] rounded-xl p-6 mb-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-[#8b8b8b] mb-3">
@@ -241,7 +241,7 @@ export default function LeaderboardsPage() {
                       key={range.value}
                       onClick={() => setSelectedTimeRange(range.value)}
                       className={`
-                        px-4 py-2 rounded-lg font-medium text-sm transition-all
+                        px-4 py-2 rounded-xl font-medium text-sm transition-all
                         ${
                           selectedTimeRange === range.value
                             ? 'bg-[#d4af37] text-[#0f0f0f] font-semibold text-white'
@@ -258,7 +258,7 @@ export default function LeaderboardsPage() {
           </div>
 
           {/* Leaderboard */}
-          <div className="bg-[#2a2a2a] border border-[#2a2a2a] rounded-lg overflow-hidden">
+          <div className="bg-[#2a2a2a] border border-[#2a2a2a] rounded-xl overflow-hidden">
             {loading ? (
               <div className="p-12 text-center">
                 <div className="text-[#8b8b8b]">Loading leaderboard...</div>
@@ -322,7 +322,7 @@ export default function LeaderboardsPage() {
           </div>
 
           {filteredUsers.length === 0 && (
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-12 text-center">
+            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-12 text-center">
               <div className="text-6xl mb-4">🏆</div>
               <h3 className="text-xl font-bold text-white mb-2">No Leaderboard Data Yet</h3>
               <p className="text-[#8b8b8b] mb-4">

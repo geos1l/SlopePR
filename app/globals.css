@@ -28,18 +28,25 @@
   --color-success: var(--success);
   --color-border: var(--border);
   --color-card: var(--card);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-geist-sans);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Display", system-ui, sans-serif;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
 /* Custom scrollbar for calendar day boxes */
@@ -58,4 +65,41 @@ body {
 
 .calendar-day-scroll::-webkit-scrollbar-thumb:hover {
   background: #3a3a3a;
+}
+
+/* 3D Text Effect for Logo - Clash Royale Style */
+.logo-3d {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 0.9;
+}
+
+.logo-slope {
+  color: #c0c0c0;
+  text-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 1),
+    2px 2px 0px rgba(0, 0, 0, 0.9),
+    1px 1px 0px rgba(0, 0, 0, 0.8),
+    0px 4px 8px rgba(0, 0, 0, 0.6),
+    0px 8px 16px rgba(0, 0, 0, 0.4),
+    -1px -1px 0px rgba(255, 255, 255, 0.15),
+    -2px -2px 0px rgba(255, 255, 255, 0.1);
+  position: relative;
+  display: inline-block;
+}
+
+.logo-royale {
+  color: #d4af37;
+  text-shadow: 
+    3px 3px 0px rgba(139, 105, 20, 1),
+    2px 2px 0px rgba(139, 105, 20, 0.9),
+    1px 1px 0px rgba(139, 105, 20, 0.8),
+    0px 4px 8px rgba(0, 0, 0, 0.6),
+    0px 8px 16px rgba(0, 0, 0, 0.4),
+    -1px -1px 0px rgba(255, 215, 0, 0.3),
+    -2px -2px 0px rgba(255, 215, 0, 0.2);
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4));
 }

@@ -11,7 +11,7 @@ export default function AchievementsRow({ achievements }: AchievementsRowProps) 
         <div
           key={achievement.id}
           className={`
-            flex items-center gap-2 px-3 py-2 rounded-lg border text-sm
+            flex items-center gap-2 px-3 py-2 rounded-xl border text-sm
             ${
               achievement.unlocked
                 ? 'bg-[#4a90e2]/10 border-[#4a90e2]/30 text-[#4a90e2]'

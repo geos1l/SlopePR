@@ -10,7 +10,7 @@ export default function StreakSummary({ streak }: StreakSummaryProps) {
   );
 
   return (
-    <div className="bg-gradient-to-r from-[#4a90e2]/10 via-[#d4af37]/5 to-[#4a90e2]/10 border border-[#4a90e2]/20 rounded-lg p-4">
+    <div className="bg-gradient-to-r from-[#4a90e2]/10 via-[#d4af37]/5 to-[#4a90e2]/10 border border-[#4a90e2]/20 rounded-xl p-4">
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
           <div>

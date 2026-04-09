@@ -119,12 +119,12 @@ export default function ExerciseSearch({ selectedExerciseId, onSelect, placehold
         onChange={handleInputChange}
         onFocus={handleInputFocus}
         placeholder={loading ? 'Loading exercises...' : placeholder}
-        className="w-full bg-[#2a2a2a] border border-[#2a2a2a] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#d4af37]"
+        className="w-full bg-[#2a2a2a] border border-[#2a2a2a] rounded-xl px-4 py-2 text-white focus:outline-none focus:border-[#d4af37]"
         disabled={loading}
       />
       
       {isOpen && (searchQuery.trim() === '' ? exercises : filteredExercises).length > 0 && (
-        <div className="absolute z-50 w-full mt-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg shadow-lg max-h-60 overflow-y-auto">
+        <div className="absolute z-50 w-full mt-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl shadow-lg max-h-60 overflow-y-auto">
           {(searchQuery.trim() === '' ? exercises : filteredExercises).map((exercise) => (
             <button
               key={exercise.id}
@@ -145,13 +145,13 @@ export default function ExerciseSearch({ selectedExerciseId, onSelect, placehold
       )}
 
       {isOpen && searchQuery.trim() !== '' && filteredExercises.length === 0 && !loading && exercises.length > 0 && (
-        <div className="absolute z-50 w-full mt-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg shadow-lg p-4 text-center text-[#8b8b8b]">
+        <div className="absolute z-50 w-full mt-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl shadow-lg p-4 text-center text-[#8b8b8b]">
           No exercises found matching "{searchQuery}"
         </div>
       )}
 
       {isOpen && !loading && exercises.length === 0 && (
-        <div className="absolute z-50 w-full mt-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg shadow-lg p-4 text-center text-[#8b8b8b]">
+        <div className="absolute z-50 w-full mt-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl shadow-lg p-4 text-center text-[#8b8b8b]">
           <div className="text-sm mb-2 font-semibold text-white">No exercises loaded</div>
           <div className="text-xs mb-2">Check browser console for errors.</div>
           <div className="text-xs">You may need to set up RLS policies in Supabase.</div>

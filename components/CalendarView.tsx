@@ -115,20 +115,20 @@ export default function CalendarView({ workouts, selectedDate, onDateSelect, onW
   const today = new Date().toISOString().split('T')[0];
 
   return (
-    <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-6">
+    <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6">
       {/* Calendar Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-4">
           <button
             onClick={goToToday}
-            className="px-4 py-2 bg-[#2a2a2a] text-white rounded-lg hover:bg-[#252525] transition-colors text-sm font-medium"
+            className="px-4 py-2 bg-[#2a2a2a] text-white rounded-xl hover:bg-[#252525] transition-colors text-sm font-medium"
           >
             Today
           </button>
           <div className="flex items-center gap-2">
             <button
               onClick={goToPreviousMonth}
-              className="p-2 text-[#8b8b8b] hover:text-white hover:bg-[#1a1a1a] rounded-lg transition-colors"
+              className="p-2 text-[#8b8b8b] hover:text-white hover:bg-[#1a1a1a] rounded-xl transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -136,7 +136,7 @@ export default function CalendarView({ workouts, selectedDate, onDateSelect, onW
             </button>
             <button
               onClick={goToNextMonth}
-              className="p-2 text-[#8b8b8b] hover:text-white hover:bg-[#1a1a1a] rounded-lg transition-colors"
+              className="p-2 text-[#8b8b8b] hover:text-white hover:bg-[#1a1a1a] rounded-xl transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -172,7 +172,7 @@ export default function CalendarView({ workouts, selectedDate, onDateSelect, onW
               key={index}
               onClick={() => onDateSelect(day.dateString)}
               className={`
-                min-h-[100px] max-h-[100px] p-2 border border-[#2a2a2a] rounded-lg cursor-pointer transition-all flex flex-col
+                min-h-[100px] max-h-[100px] p-2 border border-[#2a2a2a] rounded-xl cursor-pointer transition-all flex flex-col
                 ${!day.isCurrentMonth ? 'opacity-30' : ''}
                 ${isToday ? 'bg-[#d4af37]/10 border-[#d4af37]/30' : ''}
                 ${isSelected ? 'bg-[#EF4444]/20 border-[#d4af37]' : 'hover:bg-[#1a1a1a]'}

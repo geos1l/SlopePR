@@ -24,7 +24,7 @@ export default function ProgressChart({ data, onRangeChange, currentRange, yAxis
 
   if (data.length === 0) {
     return (
-      <div className="bg-[#0a0a0a] border border-[#1a1a1a] rounded-lg p-8 text-center">
+      <div className="bg-[#0a0a0a] border border-[#1a1a1a] rounded-xl p-8 text-center">
         <div className="text-[#8b8b8b]">No data available for this range</div>
       </div>
     );
@@ -58,7 +58,7 @@ export default function ProgressChart({ data, onRangeChange, currentRange, yAxis
   const hoveredPoint = hoveredIndex !== null ? data[hoveredIndex] : null;
 
   return (
-    <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-6">
+    <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
         <div>
           <h3 className="text-lg font-bold text-white mb-1 tracking-tight">Strength Progress</h3>
@@ -191,7 +191,7 @@ export default function ProgressChart({ data, onRangeChange, currentRange, yAxis
         {/* Tooltip */}
         {hoveredPoint && hoveredIndex !== null && (
           <div
-            className="absolute bg-[#1a1a1a] border border-[#d4af37] rounded-lg p-3 shadow-xl z-10 pointer-events-none"
+            className="absolute bg-[#1a1a1a] border border-[#d4af37] rounded-xl p-3 shadow-xl z-10 pointer-events-none"
             style={{
               left: `${(getX(hoveredIndex, 800) / 800) * 100}%`,
               top: `${getY(getYValue(hoveredPoint), chartHeight) - 100}px`,

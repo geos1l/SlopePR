@@ -18,7 +18,7 @@ interface Log {
   exercise_id: string;
   exercise_name: string;
   weight: number | null;
-  reps: number;
+  reps: number;image.png
 }
 
 interface LoggedExercise {
@@ -217,11 +217,11 @@ export default function ChartsPage() {
         </div>
         
         {!isLoggedIn && (
-          <div className="mb-6 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-4 text-center">
+          <div className="mb-6 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-4 text-center">
             <p className="text-[#8b8b8b] mb-2">You're not logged in. Log in to track your strength progress.</p>
             <Link
               href="/login"
-              className="inline-block bg-[#d4af37] text-[#0f0f0f] px-6 py-2 rounded-lg font-semibold hover:bg-[#b8941f] transition-colors"
+              className="inline-block bg-[#d4af37] text-[#0f0f0f] px-6 py-2 rounded-xl font-semibold hover:bg-[#b8941f] transition-colors"
             >
               Log In
             </Link>
@@ -229,11 +229,11 @@ export default function ChartsPage() {
         )}
         
         {isLoggedIn && logs.length === 0 && (
-          <div className="mb-6 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-6 text-center">
+          <div className="mb-6 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6 text-center">
             <p className="text-[#8b8b8b] mb-4">You haven't logged any workouts yet. Start tracking your progress!</p>
             <Link
               href="/calendar"
-              className="inline-block bg-[#d4af37] text-[#0f0f0f] px-6 py-3 rounded-lg font-semibold hover:bg-[#b8941f] transition-colors"
+              className="inline-block bg-[#d4af37] text-[#0f0f0f] px-6 py-3 rounded-xl font-semibold hover:bg-[#b8941f] transition-colors"
             >
               Log Your First Workout
             </Link>
@@ -272,17 +272,17 @@ export default function ChartsPage() {
 
         {/* Additional Info Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-4">
+          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-4">
             <div className="text-[#8b8b8b] mb-1">Total Logs</div>
             <div className="text-xl font-bold text-white">{logs.length}</div>
           </div>
-          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-4">
+          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-4">
             <div className="text-[#8b8b8b] mb-1">Heaviest Lift</div>
             <div className="text-xl font-bold text-[#d4af37]">
               {yAxisMetric === 'weight' && allTimePR > 0 ? `${allTimePR} lbs` : '—'}
             </div>
           </div>
-          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-4">
+          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-4">
             <div className="text-[#8b8b8b] mb-1">Time Trained</div>
             <div className="text-xl font-bold text-white">—</div>
           </div>

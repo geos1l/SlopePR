@@ -324,7 +324,7 @@ export default function CalendarPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Log Workout Form */}
             <div className="lg:col-span-1">
-              <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-6">
+              <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6">
                 <h2 className="text-xl font-bold mb-4 text-[#F5F5F5]">Log Workout</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
@@ -335,7 +335,7 @@ export default function CalendarPage() {
                       type="date"
                       value={formDate}
                       onChange={(e) => setFormDate(e.target.value)}
-                      className="w-full bg-[#2a2a2a] border border-[#2a2a2a] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#d4af37]"
+                      className="w-full bg-[#2a2a2a] border border-[#2a2a2a] rounded-xl px-4 py-2 text-white focus:outline-none focus:border-[#d4af37]"
                     />
                   </div>
 
@@ -376,7 +376,7 @@ export default function CalendarPage() {
                         value={weight}
                         onChange={(e) => setWeight(e.target.value)}
                         placeholder="185"
-                        className="w-full bg-[#2a2a2a] border border-[#2a2a2a] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#d4af37]"
+                        className="w-full bg-[#2a2a2a] border border-[#2a2a2a] rounded-xl px-4 py-2 text-white focus:outline-none focus:border-[#d4af37]"
                         required={!isBodyweightExercise}
                       />
                     </div>
@@ -391,7 +391,7 @@ export default function CalendarPage() {
                       value={reps}
                       onChange={(e) => setReps(e.target.value)}
                       placeholder="5"
-                      className="w-full bg-[#2a2a2a] border border-[#2a2a2a] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#d4af37]"
+                      className="w-full bg-[#2a2a2a] border border-[#2a2a2a] rounded-xl px-4 py-2 text-white focus:outline-none focus:border-[#d4af37]"
                       required
                     />
                   </div>
@@ -400,7 +400,7 @@ export default function CalendarPage() {
                     type="submit"
                     disabled={!isLoggedIn}
                     className={`
-                      w-full py-3 rounded-lg font-semibold transition-colors
+                      w-full py-3 rounded-xl font-semibold transition-colors
                       ${isLoggedIn 
                         ? 'bg-[#d4af37] text-[#0f0f0f] hover:bg-[#b8941f]' 
                         : 'bg-[#2a2a2a] text-[#8b8b8b] cursor-not-allowed opacity-50'
@@ -424,11 +424,11 @@ export default function CalendarPage() {
                 />
               </div>
               {!isLoggedIn && (
-                <div className="mt-4 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-4 text-center">
+                <div className="mt-4 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-4 text-center">
                   <p className="text-[#8b8b8b] mb-2">You're not logged in. Log in to view and log your workouts.</p>
                   <Link
                     href="/login"
-                    className="inline-block bg-[#d4af37] text-[#0f0f0f] px-6 py-2 rounded-lg font-semibold hover:bg-[#b8941f] transition-colors"
+                    className="inline-block bg-[#d4af37] text-[#0f0f0f] px-6 py-2 rounded-xl font-semibold hover:bg-[#b8941f] transition-colors"
                   >
                     Log In
                   </Link>
@@ -442,11 +442,11 @@ export default function CalendarPage() {
       {/* Delete Confirmation Modal */}
       {workoutToDelete && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-6 max-w-md w-full mx-4">
+          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6 max-w-md w-full mx-4">
             <h3 className="text-xl font-bold text-white mb-4">Delete Workout?</h3>
             <div className="mb-6">
               <p className="text-[#8b8b8b] mb-2">Are you sure you want to delete this workout?</p>
-              <div className="bg-[#2a2a2a] rounded-lg p-4 border border-[#2a2a2a]">
+              <div className="bg-[#2a2a2a] rounded-xl p-4 border border-[#2a2a2a]">
                 <div className="text-white font-medium mb-1">{workoutToDelete.exerciseName}</div>
                 <div className="text-[#8b8b8b] text-sm">
                   Date: {new Date(workoutToDelete.date).toLocaleDateString('en-US', {
@@ -466,14 +466,14 @@ export default function CalendarPage() {
               <button
                 onClick={handleDeleteCancel}
                 disabled={isDeleting}
-                className="flex-1 px-4 py-2 bg-[#2a2a2a] text-white rounded-lg hover:bg-[#1a1a1a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 px-4 py-2 bg-[#2a2a2a] text-white rounded-xl hover:bg-[#1a1a1a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Cancel
               </button>
               <button
                 onClick={handleDeleteConfirm}
                 disabled={isDeleting}
-                className="flex-1 px-4 py-2 bg-[#EF4444] text-white rounded-lg hover:bg-[#dc2626] transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
+                className="flex-1 px-4 py-2 bg-[#EF4444] text-white rounded-xl hover:bg-[#dc2626] transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
               >
                 {isDeleting ? 'Deleting...' : 'Delete'}
               </button>

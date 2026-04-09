@@ -63,7 +63,7 @@ export default function ClansPage() {
                 }}
                 disabled={!isLoggedIn}
                 className={`
-                  px-6 py-3 rounded-lg font-semibold transition-colors border
+                  px-6 py-3 rounded-xl font-semibold transition-colors border
                   ${isLoggedIn
                     ? 'bg-[#2a2a2a] text-white hover:bg-[#1a1a1a] border-[#2a2a2a]'
                     : 'bg-[#2a2a2a] text-[#8b8b8b] cursor-not-allowed opacity-50 border-[#2a2a2a]'
@@ -82,7 +82,7 @@ export default function ClansPage() {
                 }}
                 disabled={!isLoggedIn}
                 className={`
-                  px-6 py-3 rounded-lg font-semibold transition-colors
+                  px-6 py-3 rounded-xl font-semibold transition-colors
                   ${isLoggedIn
                     ? 'bg-[#d4af37] text-[#0f0f0f] hover:bg-[#b8941f]'
                     : 'bg-[#2a2a2a] text-[#8b8b8b] cursor-not-allowed opacity-50'
@@ -102,11 +102,11 @@ export default function ClansPage() {
           <div className="mb-8">
             <h2 className="text-xl font-bold mb-4 text-white">My Clans</h2>
             {!isLoggedIn ? (
-              <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-8 text-center opacity-50">
+              <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-8 text-center opacity-50">
                 <p className="text-[#8b8b8b] mb-4">Log in to view your clans</p>
                 <Link
                   href="/login"
-                  className="inline-block bg-[#d4af37] text-[#0f0f0f] px-6 py-2 rounded-lg font-semibold hover:bg-[#b8941f] transition-colors"
+                  className="inline-block bg-[#d4af37] text-[#0f0f0f] px-6 py-2 rounded-xl font-semibold hover:bg-[#b8941f] transition-colors"
                 >
                   Log In
                 </Link>
@@ -114,7 +114,7 @@ export default function ClansPage() {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {mockClans.filter(clan => clan.isMember).length === 0 ? (
-                  <div className="col-span-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-12 text-center">
+                  <div className="col-span-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-12 text-center">
                     <div className="text-6xl mb-4">👥</div>
                     <h3 className="text-xl font-bold text-white mb-2">No Clans Yet</h3>
                     <p className="text-[#8b8b8b] mb-4">
@@ -127,7 +127,7 @@ export default function ClansPage() {
                     .map((clan) => (
                       <div
                         key={clan.id}
-                        className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-6 hover:border-[#d4af37]/30 transition-colors"
+                        className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6 hover:border-[#d4af37]/30 transition-colors"
                       >
                         <div className="flex items-start justify-between mb-3">
                           <h3 className="text-lg font-bold text-white">{clan.name}</h3>
@@ -156,7 +156,7 @@ export default function ClansPage() {
         {/* Create Clan Modal */}
         {showCreateModal && (
           <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-6 max-w-md w-full">
+            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6 max-w-md w-full">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-xl font-bold text-white">Create Clan</h2>
                 <button
@@ -176,7 +176,7 @@ export default function ClansPage() {
                     value={clanName}
                     onChange={(e) => setClanName(e.target.value)}
                     placeholder="Iron Warriors"
-                    className="w-full bg-[#1a1a1a] border border-[#1a1a1a] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#EF4444]"
+                    className="w-full bg-[#1a1a1a] border border-[#1a1a1a] rounded-xl px-4 py-2 text-white focus:outline-none focus:border-[#EF4444]"
                     required
                   />
                 </div>
@@ -189,7 +189,7 @@ export default function ClansPage() {
                     onChange={(e) => setClanDescription(e.target.value)}
                     placeholder="A competitive group focused on strength gains"
                     rows={3}
-                    className="w-full bg-[#1a1a1a] border border-[#1a1a1a] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#EF4444] resize-none"
+                    className="w-full bg-[#1a1a1a] border border-[#1a1a1a] rounded-xl px-4 py-2 text-white focus:outline-none focus:border-[#EF4444] resize-none"
                     required
                   />
                 </div>
@@ -197,13 +197,13 @@ export default function ClansPage() {
                   <button
                     type="button"
                     onClick={() => setShowCreateModal(false)}
-                    className="flex-1 bg-[#1a1a1a] text-white py-2 rounded-lg font-medium hover:bg-[#252525] transition-colors"
+                    className="flex-1 bg-[#1a1a1a] text-white py-2 rounded-xl font-medium hover:bg-[#252525] transition-colors"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 bg-[#d4af37] text-[#0f0f0f] font-semibold text-white py-2 rounded-lg font-medium hover:bg-[#b8941f] transition-colors"
+                    className="flex-1 bg-[#d4af37] text-[#0f0f0f] font-semibold text-white py-2 rounded-xl font-medium hover:bg-[#b8941f] transition-colors"
                   >
                     Create
                   </button>

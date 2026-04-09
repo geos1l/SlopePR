@@ -18,7 +18,7 @@ export default function StatCard({ stat }: StatCardProps) {
   }[stat.trend || 'neutral'];
 
   return (
-    <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-4">
+    <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-4">
       <div className="text-[#8b8b8b] text-sm mb-1">{stat.label}</div>
       <div className="text-2xl font-bold text-white mb-1">
         {typeof stat.value === 'number' ? stat.value.toLocaleString() : stat.value}
